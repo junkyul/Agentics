@@ -2,6 +2,28 @@
 
 Agentics is a lightweight, Python-native framework for building **structured and massively parallel agentic workflows** using Pydantic models and **transducible functions** . 
 
+A **transducible function** is an LLM-powered, type-safe transformation between Pydantic models. Agentics lets you:
+
+- Define these transformations **declaratively**  
+- Compose them into **pipelines**  
+- Execute them at scale using an asynchronous **Map–Reduce** execution engine ⚙️
+
+Under the hood, Agentics is grounded in **Logical Transduction Algebra (LTA)**, a logico-mathematical formalism that guarantees:
+
+- ✅ Composability  
+- ✅ Explainability  
+- ✅ Stability of LLM-based transformations  
+
+The result is a way to build agentic systems that are:
+
+- **Typed** – every step has explicit input/output schemas 📐  
+- **Composable** – pipelines are built from reusable transducible functions 🧩  
+- **Traceable** – outputs carry evidence back to input fields 🔍  
+- **Scalable** – async `amap` / `areduce` primitives support large workloads 🚀  
+- **Minimal** – no heavy orchestrators: just types, functions, and data 🪶  
+
+Agentics code is **simple, predictable, and robust**, and is easy to embed into modern ecosystems (LangFlow, LangChain, CrewAI, MCP, etc.) 🤝.
+
 ---
 
 ## 📚 Documentation Overview
@@ -19,14 +41,14 @@ Agentics is a lightweight, Python-native framework for building **structured and
 - **[Agentics](agentics.md)** 🧬  
   Defining Pydantic models for inputs/outputs, working with `AG` containers, loading data from JSON/CSV/DataFrames, and preserving type information across the pipeline.
 
-- **[Logical Transduction Algebra](tutorials/logical_transduction_algebra.ipynb)** 🔁  
+- **[Logical Transduction Algebra](../tutorials/logical_transduction_algebra.ipynb)** 🔁  
   Chaining transducible functions, branching, fan-in/fan-out patterns, and building reusable pipeline components.
 
-- **[Async Map–Reduce Execution](tutorials/map_reduce.ipynb)** 🚀  
+- **[Async Map–Reduce Execution](../tutorials/map_reduce.ipynb)** 🚀  
   Using `amap` and `areduce` for large-scale runs, batching strategies, handling failures, and performance considerations.
 
 
-- **[Examples & Use Cases](./examples)** 📘  
+- **[Examples & Use Cases](../examples)** 📘  
   End-to-end examples: text-to-SQL, data extraction and enrichment, classification, document workflows, evaluation pipelines, and more.
 
 
