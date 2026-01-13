@@ -112,7 +112,7 @@ async def answer_question_from_data(state:Question )-> Question:
                                             transduction_type="areduce",
                                             areduce_batch_size=10000,
                                             instructions=f"""
-You have been provided with a CSV file which migth contain relevant information to answer a given QUESTION. 
+You have been provided with a CSV file which might contain relevant information to answer a given QUESTION. 
 QUESTION: {state.question}
 
 Your task is to collect intermediate evidence needed to answer the question from the provided data at a later stage 
