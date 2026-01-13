@@ -56,7 +56,7 @@ from agentics.core.default_types import (
     StateOperator,
     StateReducer,
 )
-from agentics.core.llm_connections import available_llms, get_llm_provider
+from agentics.core.llm_connections import get_llm_provider, get_available_llms
 from agentics.core.utils import (
     chunk_list,
     get_function_io_types,
@@ -220,6 +220,7 @@ class AG(BaseModel, Generic[T]):
     def get_llm_provider(
         cls, provider_name: str = "first"
     ) -> Union[LLM, dict[str, LLM]]:
+        # available_llms = get_available_llms()
         if provider_name == "first":
             return (
                 next(iter(available_llms.values()), None)

@@ -10,7 +10,6 @@ from loguru import logger
 from openai import AsyncOpenAI
 from pydantic import BaseModel
 
-from agentics.core.llm_connections import watsonx_llm
 from agentics.core.mellea_pydantic_transducer import structured_decoding_using_mellea
 from agentics.core.utils import async_odered_progress, openai_response
 
@@ -19,7 +18,7 @@ load_dotenv()
 
 class AsyncExecutor(ABC):
 
-    wait: int = 0.01
+    wait: float = 0.01
     max_retries: int = 2
     timeout: int | None = None
     _retry: int = 0
